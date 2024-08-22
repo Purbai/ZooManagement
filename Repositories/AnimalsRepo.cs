@@ -37,6 +37,7 @@ namespace ZooManagement.Repositories
                 BirthDate =  DateOnly.Parse(animal.BirthDate),
                 AcquiredDate =  DateOnly.Parse(animal.AcquiredDate),
             });
+            
             _context.SaveChanges();
             return insertResult.Entity;
         }
