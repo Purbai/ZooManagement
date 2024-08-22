@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "4E5PAKf41wM=",
-  "success": false,
+  "dgSpecHash": "vGR6JicZ1C0=",
+  "success": true,
   "projectFilePath": "C:\\Users\\AnuRia\\Documents\\Training\\ZooManagement\\ZooManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.8\\microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
@@ -9,13 +9,13 @@
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.8\\microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",
-    "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.3\\microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
+    "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.8\\microsoft.entityframeworkcore.relational.8.0.8.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\8.0.8\\microsoft.entityframeworkcore.sqlite.8.0.8.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\8.0.8\\microsoft.entityframeworkcore.sqlite.core.8.0.8.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
-    "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.1\\microsoft.extensions.dependencymodel.8.0.1.nupkg.sha512",
@@ -36,15 +36,5 @@
     "C:\\Users\\AnuRia\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\AnuRia\\.nuget\\packages\\system.text.json\\8.0.4\\system.text.json.8.0.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.EntityFrameworkCore.Relational from 8.0.8 to 7.0.3. Reference the package directly from the project to select a different version. \r\n ZooManagement -> Microsoft.EntityFrameworkCore.Sqlite 8.0.8 -> Microsoft.EntityFrameworkCore.Sqlite.Core 8.0.8 -> Microsoft.EntityFrameworkCore.Relational (>= 8.0.8) \r\n ZooManagement -> Microsoft.EntityFrameworkCore.Relational (>= 7.0.3)",
-      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }
