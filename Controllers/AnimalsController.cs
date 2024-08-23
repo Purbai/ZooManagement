@@ -8,7 +8,7 @@ namespace ZooManagement.Controllers
     [ApiController]
     [Route("/animals")]
 
-    public class AnimalsController: ControllerBase
+    public class AnimalsController : ControllerBase
     {
         private readonly IAnimalsRepo _animals;
 
@@ -25,6 +25,15 @@ namespace ZooManagement.Controllers
             return new AnimalResponse(animal);
         }
 
+        [HttpGet("")]
+        public ActionResult<AnimalListResponse> Search([FromQuery] AnimalSearchRequest searchRequest)
+        {
+            var animals = _animals.Search(searchRequest);
+            var animalCount = _animals.Count(searchRequest);
+            return AnimalListResponse.Create(searchRequest, animals, animalCount);
+        }
+
+
         [HttpPost("create")]
         public IActionResult Create([FromBody] CreateAnimalRequest newAnimal)
         {
@@ -39,5 +48,5 @@ namespace ZooManagement.Controllers
             var animalResponse = new AnimalResponse(animal);
             return Created(url, animalResponse);
         }
-    } 
+    }
 }
