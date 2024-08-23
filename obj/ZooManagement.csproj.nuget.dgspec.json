@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AnuRia\\Documents\\Training\\ZooManagement\\ZooManagement.csproj": {}
+    "C:\\training\\Room1\\ZooManagement\\ZooManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AnuRia\\Documents\\Training\\ZooManagement\\ZooManagement.csproj": {
+    "C:\\training\\Room1\\ZooManagement\\ZooManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AnuRia\\Documents\\Training\\ZooManagement\\ZooManagement.csproj",
+        "projectUniqueName": "C:\\training\\Room1\\ZooManagement\\ZooManagement.csproj",
         "projectName": "ZooManagement",
-        "projectPath": "C:\\Users\\AnuRia\\Documents\\Training\\ZooManagement\\ZooManagement.csproj",
-        "packagesPath": "C:\\Users\\AnuRia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AnuRia\\Documents\\Training\\ZooManagement\\obj\\",
+        "projectPath": "C:\\training\\Room1\\ZooManagement\\ZooManagement.csproj",
+        "packagesPath": "C:\\Users\\PurVar\\.nuget\\packages\\",
+        "outputPath": "C:\\training\\Room1\\ZooManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AnuRia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\PurVar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ZooManagement.Repositories;
+using ZooManagement.Data;
 
 namespace ZooManagement
 {
@@ -30,6 +31,19 @@ namespace ZooManagement
 
             var context = services.GetRequiredService<ZooManagementDbContext>();
             context.Database.EnsureCreated();
+
+            if (!context.Animals.Any())
+            {
+                var animal = SampleAnimals.GetAnimals();
+                context.Animals.AddRange(animal);
+                context.SaveChanges();
+            }
+            if (!context.AnimalTypes.Any())
+            {
+                var animalTypes = SampleAnimalType.GetAnimalTypes();
+                context.AnimalTypes.AddRange(animalTypes);
+                context.SaveChanges();
+            }
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
