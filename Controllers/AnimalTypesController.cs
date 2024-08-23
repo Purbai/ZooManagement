@@ -8,6 +8,7 @@ namespace ZooManagement.Controllers
     [ApiController]
     [Route("/animaltypes")]
 
+
      public class AnimalTypesController: ControllerBase
     {
         private readonly IAnimalTypesRepo _animalTypes;
@@ -17,6 +18,14 @@ namespace ZooManagement.Controllers
             _animalTypes = animalTypes;
         }
 
+        [HttpGet("")]
+        public ActionResult<List<AnimalTypeResponse>> GetAll()
+        {
+            var animalType = _animalTypes.GetAllAnimalTypes();
+
+            // return AnimalTypeResponse(animalType);
+            return animalType.Select(animalType => new AnimalTypeResponse(animalType)).ToList();
+        }
         [HttpPost("create")]
         public IActionResult Create([FromBody] CreateAnimalTypeRequest newAnimalType)
         {

@@ -5,8 +5,10 @@ namespace ZooManagement.Repositories
 {
     public interface IAnimalTypesRepo
     {
+        List<AnimalType> GetAllAnimalTypes();
         AnimalType GetById(int id);
         AnimalType Create(CreateAnimalTypeRequest animalType);
+
         
     }
 
@@ -19,6 +21,10 @@ namespace ZooManagement.Repositories
             _context = context;
         }
 
+
+        public List<AnimalType> GetAllAnimalTypes(){
+            return _context.AnimalTypes.ToList();
+        }
         public AnimalType GetById(int id){
             return _context.AnimalTypes.Single(animalType => animalType.Id == id);
         }
