@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using ZooManagement.Models.Database;
 using ZooManagement.Models.Request;
 using ZooManagement.Models.Response;
 using ZooManagement.Repositories;
-
 
 namespace ZooManagement.Controllers
 {
@@ -30,11 +28,6 @@ namespace ZooManagement.Controllers
             var url = Url.Action("GetById", new { id = animalType.Id });
             var animalTypeResponse = new AnimalTypeResponse(animalType);
             return Created(url, animalTypeResponse);
-
-            
         }
-
-
-
     }
 }

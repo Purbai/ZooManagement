@@ -1,10 +1,7 @@
-using System.Linq.Expressions;
 using Microsoft.AspNetCore.Mvc;
-using ZooManagement.Models.Database;
 using ZooManagement.Models.Request;
 using ZooManagement.Models.Response;
 using ZooManagement.Repositories;
-
 
 namespace ZooManagement.Controllers
 {
@@ -42,6 +39,5 @@ namespace ZooManagement.Controllers
             var animalResponse = new AnimalResponse(animal);
             return Created(url, animalResponse);
         }
-
     } 
 }

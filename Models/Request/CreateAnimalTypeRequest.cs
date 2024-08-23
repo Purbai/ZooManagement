@@ -10,7 +10,7 @@ namespace ZooManagement.Models.Request
         [Required]
         public string Classification { get; set; }
         
-        //[Required]
-        //public int Quantity { get; set; }
+        [Required]
+        public int Quantity { get; set; }
     }
 }

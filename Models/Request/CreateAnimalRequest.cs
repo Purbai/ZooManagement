@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using ZooManagement.Models.Database;
 
 namespace ZooManagement.Models.Request
 {
@@ -7,10 +6,13 @@ namespace ZooManagement.Models.Request
     {
         [Required]
         public string Name { get; set; }
+        [Required]
         public int AnimalTypeId { get; set; }
+        [Required]
         public string Sex { get; set; }
+        [Required]
         public string BirthDate { get; set; }
+        [Required]
         public string AcquiredDate { get; set; }
-        
     }
 }

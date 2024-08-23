@@ -1,4 +1,3 @@
-
 using ZooManagement.Models.Database;
 
 namespace ZooManagement.Models.Response
@@ -18,7 +17,5 @@ namespace ZooManagement.Models.Response
         public string Sex => _animal.Sex;
         public DateOnly BirthDate => _animal.BirthDate;
         public DateOnly AcquiredDate => _animal.AcquiredDate;
-
     }
-
 }

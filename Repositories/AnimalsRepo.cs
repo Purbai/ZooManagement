@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
 using ZooManagement.Models.Database;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using ZooManagement.Models.Request;
 
 namespace ZooManagement.Repositories

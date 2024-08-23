@@ -16,7 +16,5 @@ namespace ZooManagement.Models.Response
         public string Species => _animalType.Species;
         public string Classification => _animalType.Classification;
         public int Quantity => _animalType.Quantity;
-
     }
-
 }
