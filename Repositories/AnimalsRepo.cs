@@ -1,3 +1,5 @@
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using ZooManagement.Models.Database;
 using ZooManagement.Models.Request;
 
@@ -27,8 +29,28 @@ namespace ZooManagement.Repositories
 
         public IEnumerable<Animal> Search(AnimalSearchRequest search)
         {
+            /*
+            var query = teachers
+                .Join(AnimalType, p => p.ID, AnimalType => department.TeacherID,
+                    (AnimalType, p));
+        */
             return _context.Animals
-                .Where(p => search.AnimalTypeId == null || p.AnimalTypeId == search.AnimalTypeId)
+            //.Join("AnimalType","AnimalType.Id","Animal.AnimalTypeId")
+                // .OrderByDescending(p => p.AnimalTypeId == AnimalType.AnimalTypeId)
+                //.Join(AnimalType, inner)
+                .Where(p => p.AnimalTypeId == search.AnimalTypeId ||
+                (search.AcquiredDate != null && p.AcquiredDate == DateOnly.Parse(search.AcquiredDate)) || 
+                p.Name == search.Name ||
+                (search.Age != null && search.Age == (DateTime.Now.Year - p.BirthDate.Year)) 
+                || (
+                    search.Classification != null 
+                    // && 
+                    // ( p.AnimalTypeId == AnimalType.Id)
+                )
+                // (search.Classification !=null && p.AnimalTypeId.Where(i => i.AnimalTypeId == AnimalType.AnimalTypeId))
+                )
+                //.Include("AnimalType")
+                .Include(p => p.AnimalType)
                 .Skip((search.Page - 1) * search.PageSize)
                 .Take(search.PageSize);
         }

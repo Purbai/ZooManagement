@@ -13,13 +13,13 @@ namespace ZooManagement
             builder.Services.AddControllers();
             builder.Services.AddTransient<IAnimalsRepo, AnimalsRepo>();
             builder.Services.AddTransient<IAnimalTypesRepo, AnimalTypesRepo>();
-            
+
             builder.Services.AddDbContext<ZooManagementDbContext>(options =>
             {
                 options.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));
                 options.UseSqlite("Data Source=zoomanagement.db");
             });
-            
+
             // Add services to the container.
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -32,16 +32,22 @@ namespace ZooManagement
             var context = services.GetRequiredService<ZooManagementDbContext>();
             context.Database.EnsureCreated();
 
-            if (!context.Animals.Any())
-            {
-                var animal = SampleAnimals.GetAnimals();
-                context.Animals.AddRange(animal);
-                context.SaveChanges();
-            }
             if (!context.AnimalTypes.Any())
             {
                 var animalTypes = SampleAnimalType.GetAnimalTypes();
                 context.AnimalTypes.AddRange(animalTypes);
+                context.SaveChanges();
+            }
+            if (!context.Enclosures.Any())
+            {
+                var enclosure = SampleEnclosures.GetEnclosures();
+                context.Enclosures.AddRange(enclosure);
+                context.SaveChanges();
+            }
+            if (!context.Animals.Any())
+            {
+                var animal = SampleAnimals.GetAnimals();
+                context.Animals.AddRange(animal);
                 context.SaveChanges();
             }
 
